@@ -1,0 +1,18 @@
+# Distributed under the MIT License.
+# See LICENSE.txt for details.
+
+# Disable PR comments
+comment: false
+
+coverage:
+  status:
+    # Check that PRs increase overall coverage
+    project:
+      default:
+        target: auto
+        # Account for random-value tests sometimes taking different code paths
+        threshold: 0.3%
+    # Check that PRs are fully tested
+    patch:
+      default:
+        target: 100%
